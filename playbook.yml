@@ -1,0 +1,22 @@
+---
+- hosts: all
+  tasks:
+    - name: install ruby2
+      sudo: yes
+      apt: pkg=ruby2.0 state=latest update_cache=yes
+    - name: install bundler
+      sudo: yes
+      apt: package=bundler state=latest 
+    - name: install postgresql
+      sudo: yes
+      apt: package=postgresql state=latest
+    - name: install supervisor
+      sudo: yes
+      apt: package=supervisor state=latest
+    - name: install rabbit
+      sudo: yes
+      apt: package=rabbitmq-server state=latest
+    - name: install ruby-bunny
+      sudo: yes
+      apt: package=ruby-bunny state=latest
+
