@@ -19,4 +19,7 @@
     - name: install ruby-bunny
       sudo: yes
       apt: package=ruby-bunny state=latest
+    - name: install golang
+      sudo: yes
+      apt: package=golang state=latest
 
